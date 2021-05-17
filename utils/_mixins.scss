@@ -1,0 +1,36 @@
+/*mixins du projet 3*/
+
+@mixin fullscreen
+{
+    width: 100%;
+    min-width: 320px;
+    max-width: none;
+} 
+@mixin flexcol 
+{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexrow 
+{
+    display: flex;
+    flex-direction: row;
+}
+@mixin center
+{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gridhead 
+{
+    display: grid;
+    grid-template-areas: "logoArea" "headingArea" "descriptionArea" "btnexploreArea";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 50px 170px 50px;
+    grid-row-gap: 20px;
+    padding-bottom: 0px;
+    margin: 0px;
+    height: 350px;
+
+}

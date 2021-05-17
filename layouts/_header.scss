@@ -1,0 +1,85 @@
+header
+    {
+        @include gridhead;
+        @include fullscreen;
+        text-align: center;
+
+    & #logo
+        {
+            /*grid-area: logoArea;*/
+            justify-self: center;
+        }
+
+    & .form-heading
+        {
+            /*grid-area: headingArea;*/
+            font-family: 'Roboto', sans-serif;
+            justify-self: center;
+            background-color: $colorgrey1;
+            height: 250px;
+            margin-top: -15px;
+            @include fullscreen;
+
+            & .location-search
+            {
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+                border-top: 2px solid $colorgrey2;
+                background-color:$colorgrey2;
+                @include flexrow;
+                @include center;
+
+                & .fas
+                {
+                    margin-left: 30px;
+                    margin-right: 20px;
+                }
+                & .location-search-field
+                {
+                    border: none;
+                    background-color: $colorgrey2;
+                    font: 17px 'Roboto';
+                    line-height: 30px;
+                    color: black;
+                }
+            }
+
+            & .description
+            {
+                grid-area: descriptionArea; 
+                text-align: center; 
+                @include flexcol;
+                @include center;  
+            }
+            & .btn
+            {
+                grid-area: btnexploreArea; 
+                font-family: 'Roboto', sans-serif;
+                text-align: center;
+                & .btn-explore
+                {
+                    background: linear-gradient(to bottom, $colorsecondary, $colorprimary);
+                    width: 200px;
+                    height: 40px;
+                    font: 15px 'Roboto';
+                    color: white;
+                    border: none;
+                    border-radius: 20px/20px;
+                }   
+            }
+        }        
+    & h1 
+        {
+            font: 21px 'Roboto';
+            font-weight: 900;
+            width: 250px;
+            /*@include center;*/
+        }
+    & p  
+        {
+            font: 15px 'Roboto';
+            width: 300px;
+            /*@include center;*/
+        }
+    }

@@ -1,36 +1,93 @@
+/*variables du projet 3*/
+/*mixins du projet 3*/
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 100%;
   min-width: 320px;
+  max-width: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: aqua;
-}
-
-section {
-  font-size: large;
-  font: 1em sans-serif;
-}
-
-#logo {
-  width: 70%;
-  min-width: 250px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 150px;
 }
 
 header {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "logoArea" "headingArea" "descriptionArea" "btnexploreArea";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 60px 50px 170px 50px;
+      grid-template-rows: 60px 50px 170px 50px;
+  grid-row-gap: 20px;
+  padding-bottom: 0px;
+  margin: 0px;
+  height: 350px;
+  width: 100%;
+  min-width: 320px;
+  max-width: none;
+  text-align: center;
+}
+
+header #logo {
+  /*grid-area: logoArea;*/
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+header .form-heading {
+  /*grid-area: headingArea;*/
+  font-family: 'Roboto', sans-serif;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: #f1f1f1;
+  height: 250px;
+  margin-top: -15px;
+  width: 100%;
+  min-width: 320px;
+  max-width: none;
+}
+
+header .form-heading .location-search {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 2px solid #e4e4e4;
+  background-color: #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .form-heading .location-search .fas {
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+header .form-heading .location-search .location-search-field {
+  border: none;
+  background-color: #e4e4e4;
+  font: 17px 'Roboto';
+  line-height: 30px;
+  color: black;
+}
+
+header .form-heading .description {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: descriptionArea;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,10 +103,52 @@ header {
           align-items: center;
 }
 
-img {
+header .form-heading .btn {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: btnexploreArea;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+header .form-heading .btn .btn-explore {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  width: 200px;
+  height: 40px;
+  font: 15px 'Roboto';
+  color: white;
+  border: none;
+  border-radius: 20px/20px;
+}
+
+header h1 {
+  font: 21px 'Roboto';
+  font-weight: 900;
+  width: 250px;
+  /*@include center;*/
+}
+
+header p {
+  font: 15px 'Roboto';
+  width: 300px;
+  /*@include center;*/
+}
+
+/*images du projet 3*/
+#logo {
+  width: 50%;
+  min-width: 200px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.restaurant-img {
   width: 100%;
   min-width: 320px;
-  height: 200px;
+  max-width: 450px;
+  height: 160px;
   -o-object-fit: cover;
      object-fit: cover;
 }

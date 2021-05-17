@@ -1,0 +1,17 @@
+/*images du projet 3*/
+
+#logo
+    {
+        width: 50%;
+        min-width: 200px;
+        height: 60px;
+        object-fit: contain;
+    }
+.restaurant-img
+    {
+        width: 100%;
+        min-width: 320px;
+        max-width: 450px;
+        height: 160px;
+        object-fit: cover;
+    }    

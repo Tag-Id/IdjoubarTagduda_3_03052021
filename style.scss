@@ -1,36 +1,6 @@
-body
-    {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        min-width: 320px;
-        justify-content: center;
-        align-items: center;
-        background-color: aqua;
-    }
-section
-    {
-        font-size: large;
-        font: 1em sans-serif;
-    }
-#logo
-    {
-        width: 70%;
-        min-width: 250px;
-        object-fit: contain;
-        height: 150px;
-    }
-header
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-img
-    {
-        width: 100%;
-        min-width: 320px;
-        height: 200px;
-        object-fit: cover;
-    }
+
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./layouts/body";
+@import "./layouts/header";
+@import "./components/images";
