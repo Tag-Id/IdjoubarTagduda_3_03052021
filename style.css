@@ -31,13 +31,11 @@ header {
 }
 
 header #logo {
-  /*grid-area: logoArea;*/
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
 header .form-heading {
-  /*grid-area: headingArea;*/
   font-family: 'Roboto', sans-serif;
   -ms-grid-column-align: center;
       justify-self: center;
