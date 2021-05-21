@@ -49,7 +49,7 @@ header .form-heading {
       justify-self: center;
   background-color: #f1f1f1;
   height: 250px;
-  margin-top: -15px;
+  margin-top: 0px;
   width: 100%;
   min-width: 320px;
   max-width: none;
@@ -248,96 +248,156 @@ section .fonctionnement {
   margin: auto;
 }
 
+.fonctionnement {
+  width: 90%;
+  max-width: 22rem;
+  margin: auto;
+  height: 320px;
+  margin-top: 20px;
+}
+
 .fonctionnement-buttons {
-  width: 80%;
-  margin-left: 5%;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "one" "two" "three";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 60px 60px 60px;
-      grid-template-rows: 60px 60px 60px;
-  grid-row-gap: 20px;
-  padding-bottom: 0px;
-  height: 250px;
-}
-
-.fonctionnement-buttons .fonctionnement-btn__one {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: one;
-}
-
-.fonctionnement-buttons .fonctionnement-btn__two {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: two;
-}
-
-.fonctionnement-buttons .fonctionnement-btn__three {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: three;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .fonctionnement-btn {
+  position: relative;
   width: 100%;
-  margin-left: -15px;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "one two three";
-  -ms-grid-columns: 0.2fr 0.2fr 0.6fr;
-      grid-template-columns: 0.2fr 0.2fr 0.6fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  padding-bottom: 0px;
-  height: 50px;
-}
-
-.fonctionnement-btn .fa-stack-1x {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: one;
-}
-
-.fonctionnement-btn .fa-mobile-alt {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: two;
-}
-
-.fonctionnement-btn .text {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: three;
+  height: 4.5rem;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.2rem;
+  background-color: #F6F6F6;
+  -webkit-box-shadow: 2px 2px 14px #aaaaaa;
+          box-shadow: 2px 2px 14px #aaaaaa;
 }
 
 h2 {
   font: 21px 'Roboto';
   font-weight: 900;
   width: 250px;
-  margin: 5%;
+  margin: 0px;
+  padding-bottom: 20px;
 }
 
-.fa-stack .fa-lg {
+#fonctionnement-btn__number1 {
+  background-color: #9356DC;
+  position: relative;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.3rem;
+  font: 1em 'Roboto';
+  border-radius: 50%;
+  padding-top: 0.15rem;
+  margin-left: -0.7rem;
+  text-align: center;
+}
+
+#fonctionnement-btn__number2 {
+  background-color: #9356DC;
+  position: relative;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.3rem;
+  font: 1em 'Roboto';
+  border-radius: 50%;
+  padding-top: 0.15rem;
+  margin-left: -0.7rem;
+  text-align: center;
+}
+
+#fonctionnement-btn__number3 {
+  background-color: #9356DC;
+  position: relative;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.3rem;
+  font: 1em 'Roboto';
+  border-radius: 50%;
+  padding-top: 0.15rem;
+  margin-left: -0.7rem;
+  text-align: center;
+}
+
+#fonctionnement-btn__text1 {
+  font: 1.1em 'Roboto';
+  font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 20px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  vertical-align: middle;
+  position: relative;
+  width: 13rem;
+  height: 1.5rem;
+  padding-top: 0.4rem;
+  margin-left: 0.5rem;
+  text-align: start;
 }
 
-.fa-stack-1x {
-  color: white;
-  background-color: #9356DC;
-  border-radius: 20px/20px;
-  width: 20px;
-  font: 15px 'Roboto';
+#fonctionnement-btn__text2 {
+  font: 1.1em 'Roboto';
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  vertical-align: middle;
+  position: relative;
+  width: 13rem;
+  height: 1.5rem;
+  padding-top: 0.4rem;
+  margin-left: 0.5rem;
+  text-align: start;
+}
+
+#fonctionnement-btn__text3 {
+  font: 1.1em 'Roboto';
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  vertical-align: middle;
+  position: relative;
+  width: 13rem;
+  height: 1.5rem;
+  padding-top: 0.4rem;
+  margin-left: 0.5rem;
+  text-align: start;
+}
+
+.fonctionnement-btn__icone {
+  color: grey;
 }
 
 /*images du projet 3*/

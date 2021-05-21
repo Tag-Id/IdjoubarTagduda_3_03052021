@@ -14,7 +14,7 @@ header
             justify-self: center;
             background-color: $colorgrey1;
             height: 250px;
-            margin-top: -15px;
+            margin-top: 0px;
             @include fullscreen;
 
             & .location-search

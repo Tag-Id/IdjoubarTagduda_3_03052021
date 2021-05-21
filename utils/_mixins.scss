@@ -22,52 +22,6 @@
     align-items: center;
 }
 
-@mixin gridfct
-{
-    .fonctionnement-btn__one 
-    {
-        grid-area: one;
-    }
-
-    .fonctionnement-btn__two 
-    {
-        grid-area: two;
-    }
-    .fonctionnement-btn__three
-    {
-        grid-area: three;
-    }
-    display: grid;
-    grid-template-areas: "one" "two" "three";
-    grid-template-columns: 1fr;
-    grid-template-rows: 60px 60px 60px;
-    grid-row-gap: 20px;
-    padding-bottom: 0px;
-    height: 250px;
-}
-@mixin gridfctbtn
-{
-    .fa-stack-1x 
-    {
-        grid-area: one;
-    }
-
-    .fa-mobile-alt 
-    {
-        grid-area: two;
-    }
-    .text
-    {
-        grid-area: three;
-    }
-    display: grid;
-    grid-template-areas: "one two three";
-    grid-template-columns: 0.2fr 0.2fr 0.6fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 20px;
-    padding-bottom: 0px;
-    height: 50px;
-}
 @mixin loadposition 
 {
     font: 20px 'shrikhand';
@@ -80,4 +34,33 @@
     height: 95%;
     display: flex;
     @include center;
+}
+@mixin numberposition
+{   
+    background-color: $colorprimary;
+    position: relative;
+    color: white;
+    width: 1.5rem; 
+    height: 1.5rem;
+    line-height: 1.3rem;
+    font: 1em 'Roboto'; 
+    border-radius: 50%; 
+    padding-top: 0.15rem; 
+    margin-left: -0.7rem; 
+    text-align: center;
+}
+@mixin textposition 
+{   
+    font: 1.1em 'Roboto';
+    font-weight: 600;
+    display: flex;
+    flex-wrap: nowrap;
+    align-self: baseline;
+    vertical-align: middle;
+    position: relative;
+    width: 13rem; 
+    height: 1.5rem; 
+    padding-top: 0.4rem; 
+    margin-left: 0.5rem; 
+    text-align: start;    
 }
