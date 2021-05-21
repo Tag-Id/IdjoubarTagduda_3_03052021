@@ -1,6 +1,5 @@
 header
     {
-        @include gridhead;
         @include fullscreen;
         text-align: center;
 
@@ -37,7 +36,7 @@ header
                 {
                     border: none;
                     background-color: $colorgrey2;
-                    font: 17px 'Roboto';
+                    font: 15px 'Roboto';
                     line-height: 30px;
                     color: black;
                 }
@@ -45,14 +44,12 @@ header
 
             & .description
             {
-                grid-area: descriptionArea; 
                 text-align: center; 
                 @include flexcol;
                 @include center;  
             }
             & .btn
             {
-                grid-area: btnexploreArea; 
                 font-family: 'Roboto', sans-serif;
                 text-align: center;
                 & .btn-explore
@@ -72,12 +69,10 @@ header
             font: 21px 'Roboto';
             font-weight: 900;
             width: 250px;
-            /*@include center;*/
         }
     & p  
         {
             font: 15px 'Roboto';
             width: 300px;
-            /*@include center;*/
         }
     }

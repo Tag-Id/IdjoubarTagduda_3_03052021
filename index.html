@@ -16,6 +16,21 @@
 
     <body> 
         
+        <div class="loading">
+            <div class="loading-anim">
+                <div class="loading-anim__spin">
+                    <i id="loader" class="fa fa-spinner fa-pulse fa-fw fa-stack-6x fa-lg"></i>
+                </div>
+                <div class="loading-anim__logo fa-stack-3x">
+                    <p> ohmyfood!</p>
+                    <div class=" logo-adjust">
+                        <i class="fas fa-utensils"></i>
+                        <i class="fas fa-utensil-spoon"></i>
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
 		<header> <!--le contenu de l'en-tête, le titre--> 
             <img id="logo" src="images/logo/ohmyfood.png" alt="logo"/>
 			
@@ -48,27 +63,27 @@
                 Fonctionnement
             </h2>
             <aside class="fonctionnement-buttons">
-                <button type="submit" class="fonctionnement-btn"> 
+                <div class="fonctionnement-btn" class="fonctionnement-btn__one"> 
                     <div class="fa-stack fa-lg">
                         <strong class="fa-stack-1x"> 1 </strong>
                         <i class="fas fa-mobile-alt fa-stack-2x"></i>
-                        Choisissez un restaurant
+                        <p class="text"> Choisissez un restaurant </p>
                     </div>
-                </button>
-                <button type="submit" class="fonctionnement-btn"> 
+                </div>
+                <div class="fonctionnement-btn" class="fonctionnement-btn__two"> 
                     <div class="fa-stack fa-lg">
                         <strong class="fa-stack-1x"> 2 </strong>
                         <i class="fas fa-list fa-stack-2x"></i>
-                        Composez votre menu
+                        <p> Composez votre menu </p> 
                     </div>
-                </button>
-                <button type="submit" class="fonctionnement-btn"> 
+                </div>
+                <div class="fonctionnement-btn"  class="fonctionnement-btn__three"> 
                     <div class="fa-stack fa-lg">
                         <strong class="fa-stack-1x"> 3 </strong>
                         <i class="fas fa-store fa-stack-2x"></i>
-                        Dégustez au restaurant
+                        <p> Dégustez au restaurant </p> 
                     </div> 
-                </button>
+                </div>
             </aside>
         </section>
         

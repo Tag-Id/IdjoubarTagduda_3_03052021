@@ -1,0 +1,39 @@
+section .fonctionnement
+    {
+        width: 90%;
+        max-width: 450px;
+        height: 300px;
+        margin: auto;  
+    }
+.fonctionnement-buttons
+    {
+        width: 80%;
+        margin-left: 5%;
+        @include gridfct;
+    }
+.fonctionnement-btn   
+    {
+        width: 100%;
+        margin-left: -15px;
+        @include gridfctbtn;
+    }
+h2
+    {
+        font: 21px 'Roboto';
+        font-weight: 900;
+        width: 250px;
+        margin: 5%;
+    }
+.fa-stack .fa-lg
+    {   
+        @include flexrow;
+        width: 20px;
+    }
+.fa-stack-1x
+    {
+        color: white;
+        background-color: $colorprimary;
+        border-radius: 20px/20px;
+        width: 20px;
+        font: 15px 'Roboto';
+    }

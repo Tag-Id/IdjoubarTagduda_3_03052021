@@ -22,15 +22,62 @@
     align-items: center;
 }
 
-@mixin gridhead 
+@mixin gridfct
 {
+    .fonctionnement-btn__one 
+    {
+        grid-area: one;
+    }
+
+    .fonctionnement-btn__two 
+    {
+        grid-area: two;
+    }
+    .fonctionnement-btn__three
+    {
+        grid-area: three;
+    }
     display: grid;
-    grid-template-areas: "logoArea" "headingArea" "descriptionArea" "btnexploreArea";
+    grid-template-areas: "one" "two" "three";
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 50px 170px 50px;
+    grid-template-rows: 60px 60px 60px;
     grid-row-gap: 20px;
     padding-bottom: 0px;
-    margin: 0px;
-    height: 350px;
+    height: 250px;
+}
+@mixin gridfctbtn
+{
+    .fa-stack-1x 
+    {
+        grid-area: one;
+    }
 
+    .fa-mobile-alt 
+    {
+        grid-area: two;
+    }
+    .text
+    {
+        grid-area: three;
+    }
+    display: grid;
+    grid-template-areas: "one two three";
+    grid-template-columns: 0.2fr 0.2fr 0.6fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    padding-bottom: 0px;
+    height: 50px;
+}
+@mixin loadposition 
+{
+    font: 20px 'shrikhand';
+    color: white;
+    font-weight: 900;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    @include center;
 }
