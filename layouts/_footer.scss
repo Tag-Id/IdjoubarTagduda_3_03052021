@@ -1,0 +1,41 @@
+footer 
+{
+    background-color: #444444;
+    color: white;
+    padding-top: 1.4rem;
+    width: 100%;
+    & div
+    {   
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column; 
+    }
+    
+
+   
+}
+h3
+{
+    font: 1.5rem 'Shrikhand';
+}
+
+ul 
+{
+    list-style-type: none;
+    padding-left: 0; 
+    text-decoration: none;
+    font: 1em 'Roboto';
+    color: white;
+}
+li
+{
+    padding-bottom: 1rem;
+}
+a 
+{
+    text-decoration: none;
+    font: 1em 'Roboto';
+    color: white;
+}

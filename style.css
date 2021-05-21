@@ -29,6 +29,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0px;
 }
 
 header {
@@ -152,8 +153,8 @@ header p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: endloading 5s forwards;
-          animation: endloading 5s forwards;
+  -webkit-animation: endloading 3s forwards;
+          animation: endloading 3s forwards;
 }
 
 #loader {
@@ -241,18 +242,11 @@ header p {
   left: 21%;
 }
 
-section .fonctionnement {
-  width: 90%;
-  max-width: 450px;
-  height: 300px;
-  margin: auto;
-}
-
 .fonctionnement {
   width: 90%;
-  max-width: 22rem;
+  max-width: 450px;
   margin: auto;
-  height: 320px;
+  height: 350px;
   margin-top: 20px;
 }
 
@@ -400,6 +394,171 @@ h2 {
   color: grey;
 }
 
+.restaurants {
+  padding: 1.5rem 0 3rem;
+  background-color: #F6F6F6;
+}
+
+.restaurants h2 {
+  width: 90%;
+  margin: 1rem auto;
+  max-width: 22rem;
+  padding-bottom: 0px;
+}
+
+.restaurants .restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.choixrestau {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 10px #aaaaaa;
+          box-shadow: 2px 2px 10px #aaaaaa;
+}
+
+figure {
+  width: 100%;
+  margin: 0px;
+  max-width: 400px;
+  height: 200px;
+}
+
+figure figcaption {
+  position: absolute;
+  background-color: white;
+  width: 94%;
+  padding: 3%;
+  height: 50px;
+  text-decoration: none;
+  color: black;
+  font: 17px 'Roboto';
+  bottom: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+figure figcaption .restaurant-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.restaurant_nouveau {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  width: 22%;
+  background-color: #99E2D0;
+  color: #278870;
+  text-align: center;
+  font: 0.8rem 'Roboto';
+  font-weight: 500;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.restaurant-info__heart::before {
+  cursor: pointer;
+  position: absolute;
+  font-weight: 400;
+  font-size: 1.7rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.restaurant-info__heart:hover {
+  cursor: pointer;
+  position: absolute;
+  content: "\f004";
+  font-family: "Font Awesome 5 empty";
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-size: 1.7rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-transition: opacity 800ms ease-in-out;
+  transition: opacity 800ms ease-in-out;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  opacity: 0;
+}
+
+footer {
+  background-color: #444444;
+  color: white;
+  padding-top: 1.4rem;
+  width: 100%;
+}
+
+footer div {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h3 {
+  font: 1.5rem 'Shrikhand';
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-decoration: none;
+  font: 1em 'Roboto';
+  color: white;
+}
+
+li {
+  padding-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font: 1em 'Roboto';
+  color: white;
+}
+
 /*images du projet 3*/
 #logo {
   width: 50%;
@@ -411,10 +570,13 @@ h2 {
 
 .restaurant-img {
   width: 100%;
-  min-width: 320px;
+  min-width: 200px;
   max-width: 450px;
-  height: 160px;
+  height: 200px;
+  border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 0 -4rem;
+     object-position: 0 -4rem;
 }
 /*# sourceMappingURL=style.css.map */

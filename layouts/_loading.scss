@@ -11,7 +11,7 @@
         background: white;
         display: flex;
         @include center;
-        animation: endloading 5s forwards;
+        animation: endloading 3s forwards;
     }
 #loader
     {
