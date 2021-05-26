@@ -244,7 +244,7 @@ header p {
 
 .fonctionnement {
   width: 90%;
-  max-width: 450px;
+  max-width: 350px;
   margin: auto;
   height: 350px;
   margin-top: 20px;
@@ -281,6 +281,14 @@ header p {
   background-color: #F6F6F6;
   -webkit-box-shadow: 2px 2px 14px #aaaaaa;
           box-shadow: 2px 2px 14px #aaaaaa;
+}
+
+.fonctionnement-btn:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+
+.fonctionnement-btn:hover .fonctionnement-btn__icone {
+  color: #9356DC;
 }
 
 h2 {
@@ -422,7 +430,8 @@ h2 {
 .choixrestau {
   position: relative;
   width: 90%;
-  max-width: 400px;
+  min-width: 270px;
+  max-width: 350px;
   margin-bottom: 20px;
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 10px #aaaaaa;
@@ -431,9 +440,10 @@ h2 {
 
 figure {
   width: 100%;
+  min-width: 270px;
   margin: 0px;
-  max-width: 400px;
-  height: 200px;
+  max-width: 350px;
+  height: 240px;
 }
 
 figure figcaption {
@@ -467,11 +477,12 @@ figure figcaption .restaurant-info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  line-height: 23px;
 }
 
 .restaurant_nouveau {
   position: absolute;
-  top: 0.5rem;
+  top: 0.9rem;
   right: 1rem;
   width: 22%;
   background-color: #99E2D0;
@@ -481,6 +492,10 @@ figure figcaption .restaurant-info {
   font-weight: 500;
   padding-top: 0rem;
   padding-bottom: 0rem;
+}
+
+.restaurant_nouveau p {
+  margin: 6px;
 }
 
 .restaurant-info__heart::before {
@@ -570,13 +585,19 @@ a {
 
 .restaurant-img {
   width: 100%;
-  min-width: 200px;
-  max-width: 450px;
-  height: 200px;
+  min-width: 270px;
+  max-width: 350px;
+  height: 240px;
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 0 -4rem;
      object-position: 0 -4rem;
+}
+
+#note {
+  -o-object-position: bottom;
+     object-position: bottom;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

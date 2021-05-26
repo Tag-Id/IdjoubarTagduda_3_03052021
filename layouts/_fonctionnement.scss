@@ -2,7 +2,7 @@
 .fonctionnement
     {
         width: 90%;
-        max-width: 450px;
+        max-width: 350px;
         margin: auto;
         height: 350px;
         margin-top: 20px;
@@ -25,6 +25,16 @@
         margin-bottom: 1.2rem;
         background-color: #F6F6F6;
         box-shadow: 2px 2px 14px #aaaaaa; 
+        
+        &:hover
+        {
+            background-color: rgba(147, 86, 220, 0.2);
+            
+            & .fonctionnement-btn__icone 
+            {
+                color: #9356DC;
+            }
+        }
     }
 h2
     {

@@ -23,9 +23,10 @@
 figure
 {
     width: 100%;
+    min-width: 270px;
     margin: 0px;
-    max-width: 400px;
-    height: 200px;
+    max-width: 350px;
+    height: 240px;
 
     & figcaption
     {
@@ -48,6 +49,7 @@ figure
         {
             display: flex;
             flex-direction: column; 
+            line-height: 23px;
         }
     }
 }
@@ -55,7 +57,7 @@ figure
 .restaurant_nouveau
 {
     position: absolute;
-    top: 0.5rem;
+    top: 0.9rem;
     right: 1rem;
     width: 22%;
     background-color: #99E2D0;
@@ -65,6 +67,10 @@ figure
     font-weight: 500;
     padding-top: 0rem;
     padding-bottom: 0rem;
+    & p
+    {
+        margin: 6px;
+    }
 }
 
 .restaurant-info__heart::before
