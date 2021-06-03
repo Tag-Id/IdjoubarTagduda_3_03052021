@@ -3,6 +3,12 @@
     0% 
     { 
         opacity: 1;
+        background-color: white;
+    }
+    90%
+    {
+        opacity: 1;
+        background-color: white;
     }
     100%
     {
@@ -10,17 +16,31 @@
         visibility: hidden;
     }
 }
+@keyframes fa-spin
+{
+    0% 
+    { 
+        background-color: white;
+    }
+    100%
+    {   
+        background-color: white;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
 @keyframes apparition
 {
     0% 
     {
-        width: 5rem;
+        width: 0rem;
         filter: brightness(110%);
     }
 
     100% 
     {
-        width: 0;
+        width: 5rem;
         filter: brightness(110%);
     }
 }
