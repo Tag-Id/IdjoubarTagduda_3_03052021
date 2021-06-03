@@ -99,12 +99,22 @@
                         & .nom
                         {
                             display: flex;
-                            min-width: 250px;
+                            width: 80%;
+                            min-width: 200px;
                             flex-direction: column;
                             margin-left: 10px;
                             line-height: 22px;
-                            flex-wrap: nowrap;
-                            text-overflow : ellipsis;
+                            & .nom_cut 
+                            {
+                                @for $width from 0px to 300px 
+                                {
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    width: 99%;
+                                }
+                            
+                            } 
                         }
                         & .prix
                         {
@@ -121,3 +131,4 @@
             }
         }
     }
+    

@@ -17,17 +17,17 @@
     <body> 
         
 		<header> <!--le contenu de l'en-tête, le titre--> 
-            <a href="index.html" class="lien" target="_self">
-                <button id="backhome">
+            <form action="index.html" class="lien" target="_self">
+                <button id="backhome" >
                     <i class="fas fa-arrow-left"></i>
-                </button>
-                <img id="logo" src="images/logo/ohmyfood.png" alt="logo"/>
-            </a>
+                </button> 
+                <img id="logo" src="images/logo/ohmyfood.png" alt="logo"/>        
+            </form>    
         </header>
 
         <section class="menu">
             <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" class="restaurant-img__menu"/>
-            <article class="blocmenu">
+            <div class="blocmenu">
                 <div class="blocmenu-head">
                     <h2> À la française </h2>
                     <i class="far fa-heart"></i>
@@ -41,7 +41,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Tartare de poulpe acidulé </strong> 
-                                Aux zestes d'orange 
+                                <span class="nom_cut"> Aux zestes d'orange </span>  
                             </div>
                             <div class="prix">
                                 25€
@@ -53,7 +53,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Velouté de légumes d'antan </strong> 
-                                Carotte, panais, topinambour
+                                <span class="nom_cut"> Carotte, panais, topinambour </span> 
                             </div>
                             <div class="prix">
                                 35€
@@ -62,7 +62,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Soupe à l'oignon </strong> 
-                                Revisitée 
+                                <span class="nom_cut"> Revisitée </span> 
                             </div>
                             <div class="prix">
                                 20€
@@ -76,7 +76,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Coquilles Saint-Jacques </strong> 
-                                Accompagnées d'une purée de panais
+                                <span class="nom_cut"> Accompagnées d'une purée de panais </span> 
                             </div>
                             <div class="prix">
                                 40€
@@ -85,7 +85,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Magret de canard </strong> 
-                                Et parmentier de pommes de terre
+                                <span class="nom_cut"> Et parmentier de pommes de terre </span> 
                             </div>
                             <div class="prix">
                                 35€
@@ -94,7 +94,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Pigeonneau d’Ille-et-Vilaine </strong> 
-                                Sur son lit de gnocchis aux légumes
+                                <span class="nom_cut"> Sur son lit de gnocchis aux légumes </span> 
                             </div>
                             <div class="prix">
                                 44€
@@ -108,7 +108,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Pétales de violettes glacés </strong> 
-                                Et purée de noisettes
+                                <span class="nom_cut"> Et purée de noisettes </span> 
                             </div>
                             <div class="prix">
                                 18€
@@ -117,7 +117,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Fondant au chocolat </strong> 
-                                Revisité
+                                <span class="nom_cut"> Revisité </span> 
                             </div>
                             <div class="prix">
                                 22€
@@ -126,7 +126,7 @@
                         <div class="plat">
                             <div class="nom">
                                 <strong> Millefeuille croustillant </strong> 
-                                Myrtilles et pâte d’amande
+                                <span class="nom_cut"> Myrtilles et pâte d’amande </span> 
                             </div>
                             <div class="prix">
                                 23€
@@ -138,7 +138,7 @@
                 <div class="btn">
                     <input type="submit" class="btn-command" value="Commander"/>
                 </div>
-            </article>    
+            </div>    
             
         </section>  
 
