@@ -16,6 +16,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            align-content: center;
 
             & .blocmenu-head
             {
@@ -23,83 +24,100 @@
                 justify-content: space-between;
                 align-items: baseline;
                 width: 90%;
-                max-width: 350px;
+                max-width: 400px;
                 padding-top: 20px;
 
                 & h2
                 {
-                    font-family: 'Shrikhand';
+                    font: 25px 'Shrikhand';
                 }
             }
-            & .blocmenu-menu
-            {
-                width: 90%;
-                max-width: 350px;
-                & h4 
+            & .blocmenu-sanstitre
+            {   
+                width: 100%;
+                max-width: 600px;
+                min-width: 320px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @media screen and (min-width: 1024px) 
                 {
-                    font-family: 'Roboto';
-                    text-transform: uppercase;
-                    font-weight: 300;
-                    line-height: 20px;
-                    text-decoration: underline 3px solid $colortertiary;
-                }
-                & .plat
-                {
-                    position: relative;
-                    font-family: 'Roboto';
-                    width: 100%;
-                    height: 4.5rem;
-                    border-radius: 25px;
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 1.2rem;
-                    background-color: #F6F6F6;
-                    box-shadow: 2px 2px 14px #aaaaaa; 
-                    & .nom
+                    flex-direction: row;
+                    width: 90%;
+                    max-width: none;
+                    padding-top: 20px;
+                }
+                & .blocmenu-menu
+                {
+                width: 90%;
+                max-width:400px;
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                @media screen and (min-width: 1024px) 
                     {
                         display: flex;
-                        min-width: 250px;
                         flex-direction: column;
-                        margin-left: 10px;
-                        line-height: 22px;
-                        flex-wrap: nowrap;
-                        text-overflow : ellipsis;
+                        width: 100%;
+                        max-width: none;
+                        align-items: center;
+                        margin-right: 15px;
+                        padding-top: 20px;
                     }
-                    & .prix
+                    & h4 
+                    {   
+                        margin-right: 20px;
+                        font-family: 'Roboto';
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        padding-bottom: 5px;
+                        border-bottom: 3px solid $colortertiary;
+                        box-sizing: border-box;
+                        width: 45px;
+                    }
+                    & .plat
                     {
-                        font-weight: bold;
-                        align-self: baseline;
                         position: relative;
-                        top: 35px;
-                        right: 20px;
-                    }
-                } 
+                        font-family: 'Roboto';
+                        width: 100%;
+                        max-width: 400px;
+                        height: 4.5rem;
+                        border-radius: 25px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 1.2rem;
+                        background-color: #F6F6F6;
+                        box-shadow: 2px 2px 14px #aaaaaa; 
+                        @media screen and (min-width: 1024px)
+                            {
+                                margin-bottom: 20px;
+                            }
+                        
+                        & .nom
+                        {
+                            display: flex;
+                            min-width: 250px;
+                            flex-direction: column;
+                            margin-left: 10px;
+                            line-height: 22px;
+                            flex-wrap: nowrap;
+                            text-overflow : ellipsis;
+                        }
+                        & .prix
+                        {
+                            font-weight: bold;
+                            align-self: baseline;
+                            position: relative;
+                            top: 35px;
+                            right: 20px;
+                        }
+                    } 
+            
+                }
               
             }
         }
     }
-.btn-command
-{
-    background: linear-gradient(to bottom, $colorsecondary, $colorprimary);
-    width: 200px;
-    margin-top: 50px;
-    height: 40px;
-    font: 15px 'Roboto';
-    color: white;
-    border: none;
-    border-radius: 20px/20px;
-}  
-
-.backhome
-{
-    border: none;
-    background-color: white;
-}
-.fa-arrow-left
-{
-    position: relative;
-    top: -20px;
-    left: -25px;
-    font-size: 21px;
-}

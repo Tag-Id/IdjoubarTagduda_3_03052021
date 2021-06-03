@@ -6,12 +6,25 @@
         margin: auto;
         height: 350px;
         margin-top: 20px;
+
+        @media screen and (min-width:1024px) 
+        {
+            max-width: none;
+            height: 180px;
+            @include flexcol;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
     }
 .fonctionnement-buttons
     {
-        display: flex;
-        flex-direction: column;
+        @include flexcol;
         align-items: flex-start;
+        @media screen and (min-width: 1024px) 
+        {
+            flex-direction: row;
+            margin-top: 20px;
+        }
     }
 .fonctionnement-btn   
     {
@@ -25,6 +38,11 @@
         margin-bottom: 1.2rem;
         background-color: #F6F6F6;
         box-shadow: 2px 2px 14px #aaaaaa; 
+
+        @media screen and (min-width:1024px) 
+        {
+            margin-right: 25px;    
+        }
         
         &:hover
         {
@@ -43,6 +61,11 @@ h2
         width: 250px;
         margin: 0px;
         padding-bottom: 20px;
+
+        @media screen and (min-width:1024px) 
+        {
+            text-align: center;    
+        }
     }
 #fonctionnement-btn__number1 
 {

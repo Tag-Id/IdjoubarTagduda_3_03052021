@@ -2,6 +2,12 @@
     {
         padding: 1.5rem 0 3rem;
         background-color: #F6F6F6;
+
+        @media screen and (min-width: 1024px) 
+        {
+            @include flexcol;
+            align-items: center;   
+        }
         & h2 
         {
             width: 90%;
@@ -9,12 +15,48 @@
             max-width: 22rem;
             padding-bottom: 0px;
         }
-        & .restaurant
-        {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        & .restaurants__list
+        {  
+           display: flex;
+           flex-direction: column;
+           @media screen and (min-width: 1024px) 
+           {        
+                    margin-top: 20px;
+                    display: grid;
+                    grid-template-columns: 400px 400px;
+                    grid-gap: 10px;
+                    grid-template-rows: 300px 300px;
+                    
+                    &  .restaurant-pal 
+                    {
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+                    &  .restaurant-note 
+                    {
+                        grid-column: 2;
+                        grid-row: 1;
+                    }
+                    &  .restaurant-fr 
+                    {
+                        grid-column: 1;
+                        grid-row: 2;
+                    }
+                    & .restaurant-del 
+                    {
+                        grid-column: 2;
+                        grid-row: 2;
+                    }
+           }
+
+            & .restaurant
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            } 
         }
+        
     }
 .choixrestau
 {

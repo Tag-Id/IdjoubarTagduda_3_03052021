@@ -19,6 +19,32 @@
   }
 }
 
+@-webkit-keyframes apparition {
+  0% {
+    width: 5rem;
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+  }
+  100% {
+    width: 0;
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+  }
+}
+
+@keyframes apparition {
+  0% {
+    width: 5rem;
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+  }
+  100% {
+    width: 0;
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+  }
+}
+
 body {
   width: 100%;
   min-width: 320px;
@@ -105,22 +131,6 @@ header .form-heading .description {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header .form-heading .btn {
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-}
-
-header .form-heading .btn .btn-explore {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  width: 200px;
-  height: 40px;
-  font: 15px 'Roboto';
-  color: white;
-  border: none;
-  border-radius: 20px/20px;
 }
 
 header h1 {
@@ -250,6 +260,25 @@ header p {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    max-width: none;
+    height: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .fonctionnement-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,6 +290,16 @@ header p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media screen and (min-width: 1024px) {
+  .fonctionnement-buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 20px;
+  }
 }
 
 .fonctionnement-btn {
@@ -283,6 +322,12 @@ header p {
           box-shadow: 2px 2px 14px #aaaaaa;
 }
 
+@media screen and (min-width: 1024px) {
+  .fonctionnement-btn {
+    margin-right: 25px;
+  }
+}
+
 .fonctionnement-btn:hover {
   background-color: rgba(147, 86, 220, 0.2);
 }
@@ -297,6 +342,12 @@ h2 {
   width: 250px;
   margin: 0px;
   padding-bottom: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    text-align: center;
+  }
 }
 
 #fonctionnement-btn__number1 {
@@ -407,6 +458,21 @@ h2 {
   background-color: #F6F6F6;
 }
 
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .restaurants h2 {
   width: 90%;
   margin: 1rem auto;
@@ -414,7 +480,54 @@ h2 {
   padding-bottom: 0px;
 }
 
-.restaurants .restaurant {
+.restaurants .restaurants__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants .restaurants__list {
+    margin-top: 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 400px 400px;
+        grid-template-columns: 400px 400px;
+    grid-gap: 10px;
+    -ms-grid-rows: 300px 300px;
+        grid-template-rows: 300px 300px;
+  }
+  .restaurants .restaurants__list .restaurant-pal {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .restaurants .restaurants__list .restaurant-note {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .restaurants .restaurants__list .restaurant-fr {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .restaurants .restaurants__list .restaurant-del {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+}
+
+.restaurants .restaurants__list .restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,7 +654,7 @@ footer {
 
 footer div {
   width: 90%;
-  max-width: 400px;
+  max-width: 350px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,6 +663,14 @@ footer div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 760px) {
+  footer div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 h3 {
@@ -562,6 +683,12 @@ ul {
   text-decoration: none;
   font: 1em 'Roboto';
   color: white;
+}
+
+@media screen and (min-width: 760px) {
+  ul {
+    text-align: center;
+  }
 }
 
 li {
@@ -605,6 +732,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .menu .blocmenu .blocmenu-head {
@@ -618,32 +747,96 @@ a {
       -ms-flex-align: baseline;
           align-items: baseline;
   width: 90%;
-  max-width: 350px;
+  max-width: 400px;
   padding-top: 20px;
 }
 
 .menu .blocmenu .blocmenu-head h2 {
-  font-family: 'Shrikhand';
+  font: 25px 'Shrikhand';
 }
 
-.menu .blocmenu .blocmenu-menu {
+.menu .blocmenu .blocmenu-sanstitre {
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu .blocmenu .blocmenu-sanstitre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 90%;
+    max-width: none;
+    padding-top: 20px;
+  }
+}
+
+.menu .blocmenu .blocmenu-sanstitre .blocmenu-menu {
   width: 90%;
-  max-width: 350px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
-.menu .blocmenu .blocmenu-menu h4 {
+@media screen and (min-width: 1024px) {
+  .menu .blocmenu .blocmenu-sanstitre .blocmenu-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    max-width: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 15px;
+    padding-top: 20px;
+  }
+}
+
+.menu .blocmenu .blocmenu-sanstitre .blocmenu-menu h4 {
+  margin-right: 20px;
   font-family: 'Roboto';
   text-transform: uppercase;
   font-weight: 300;
-  line-height: 20px;
-  -webkit-text-decoration: underline 3px solid #99E2D0;
-          text-decoration: underline 3px solid #99E2D0;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #99E2D0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 45px;
 }
 
-.menu .blocmenu .blocmenu-menu .plat {
+.menu .blocmenu .blocmenu-sanstitre .blocmenu-menu .plat {
   position: relative;
   font-family: 'Roboto';
   width: 100%;
+  max-width: 400px;
   height: 4.5rem;
   border-radius: 25px;
   display: -webkit-box;
@@ -661,7 +854,13 @@ a {
           box-shadow: 2px 2px 14px #aaaaaa;
 }
 
-.menu .blocmenu .blocmenu-menu .plat .nom {
+@media screen and (min-width: 1024px) {
+  .menu .blocmenu .blocmenu-sanstitre .blocmenu-menu .plat {
+    margin-bottom: 20px;
+  }
+}
+
+.menu .blocmenu .blocmenu-sanstitre .blocmenu-menu .plat .nom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,37 +876,13 @@ a {
   text-overflow: ellipsis;
 }
 
-.menu .blocmenu .blocmenu-menu .plat .prix {
+.menu .blocmenu .blocmenu-sanstitre .blocmenu-menu .plat .prix {
   font-weight: bold;
   -ms-flex-item-align: baseline;
       align-self: baseline;
   position: relative;
   top: 35px;
   right: 20px;
-}
-
-.btn-command {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  width: 200px;
-  margin-top: 50px;
-  height: 40px;
-  font: 15px 'Roboto';
-  color: white;
-  border: none;
-  border-radius: 20px/20px;
-}
-
-.backhome {
-  border: none;
-  background-color: white;
-}
-
-.fa-arrow-left {
-  position: relative;
-  top: -20px;
-  left: -25px;
-  font-size: 21px;
 }
 
 /*images du projet 3*/
@@ -732,16 +907,133 @@ a {
 }
 
 #note {
-  -o-object-position: bottom;
-     object-position: bottom;
+  -o-object-position: 0 -10rem;
+     object-position: 0 -10rem;
   overflow: hidden;
+}
+
+@media screen and (max-width: 350px) {
+  #note {
+    -o-object-position: 0 -8rem;
+       object-position: 0 -8rem;
+  }
 }
 
 .restaurant-img__menu {
   width: 100%;
-  height: 300px;
+  height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 0;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .restaurant-img__menu {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .restaurant-img__menu {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .restaurant-img__menu {
+    height: 520px;
+  }
+}
+
+#backhome {
+  border: none;
+  background-color: white;
+  position: relative;
+  top: -22px;
+  left: -40px;
+  font-size: 22px;
+}
+
+.fa-heart {
+  font-size: 25px;
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.btn .btn-explore {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  width: 200px;
+  height: 40px;
+  font: 15px 'Roboto';
+  color: white;
+  border: none;
+  border-radius: 20px/20px;
+  -webkit-box-shadow: 2px 2px 10px #aaaaaa;
+          box-shadow: 2px 2px 10px #aaaaaa;
+}
+
+.btn .btn-explore:hover {
+  -webkit-box-shadow: 2px 2px 10px #5e5e5e;
+          box-shadow: 2px 2px 10px #5e5e5e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
+  background: linear-gradient(to bottom, #fface8, #ae80e5);
+}
+
+.btn-command {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  width: 200px;
+  margin-top: 50px;
+  height: 40px;
+  font: 15px 'Roboto';
+  color: white;
+  border: none;
+  border-radius: 20px/20px;
+  -webkit-box-shadow: 2px 2px 10px #aaaaaa;
+          box-shadow: 2px 2px 10px #aaaaaa;
+}
+
+.btn-command:hover {
+  -webkit-box-shadow: 2px 2px 10px #5e5e5e;
+          box-shadow: 2px 2px 10px #5e5e5e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
+  background: linear-gradient(to bottom, #fface8, #ae80e5);
+}
+
+.check {
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  top: 0.5rem;
+  right: 7rem;
+  height: 100%;
+  width: 0;
+  text-align: center;
+  background-color: #71d7be;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: translateX(6rem);
+          transform: translateX(6rem);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-animation: apparition 400ms ease-in-out forwards;
+          animation: apparition 400ms ease-in-out forwards;
+}
+
+.check .fa-check {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 1.4rem;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: -webkit-transform 600ms ease-in-out;
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
