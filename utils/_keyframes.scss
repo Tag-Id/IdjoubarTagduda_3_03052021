@@ -1,3 +1,5 @@
+/*keyframes du loading spinner*/ 
+
 @keyframes endloading
 {
     0% 
@@ -30,17 +32,58 @@
     }
 
 }
+
+/*keyframes du coeur*/
+@keyframes heartcolor
+{
+    0% {
+        opacity: 0;
+        background-color: white;
+    }
+    15% {
+        opacity: 0.2;
+        background: linear-gradient($primlight, $seclight);
+    }
+    30% {
+        opacity: 0.4;
+        background: linear-gradient($primlight, $seclight);
+    }
+    45% {
+        opacity: 0.6;
+        background: linear-gradient($primlight, $seclight);
+    }
+    75% {
+        opacity: 0.8;
+        background: linear-gradient($primlight, $colorsecondary);
+    }
+    100% {
+        opacity: 1;
+        background: linear-gradient($colorprimary, $colorsecondary);
+    }
+}
+
+/*keyframes du check*/
 @keyframes apparition
 {
     0% 
     {
         width: 0rem;
-        filter: brightness(110%);
     }
 
     100% 
     {
         width: 5rem;
-        filter: brightness(110%);
+    }
+}
+
+/*keyframes des menus*/
+
+@keyframes fadein 
+{
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
     }
 }

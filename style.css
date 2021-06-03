@@ -1,5 +1,7 @@
+@charset "UTF-8";
 /*variables du projet 3*/
 /*mixins du projet 3*/
+/*keyframes du loading spinner*/
 @-webkit-keyframes endloading {
   0% {
     opacity: 1;
@@ -51,29 +53,103 @@
   }
 }
 
-@-webkit-keyframes apparition {
+/*keyframes du coeur*/
+@-webkit-keyframes heartcolor {
   0% {
-    width: 0rem;
-    -webkit-filter: brightness(110%);
-            filter: brightness(110%);
+    opacity: 0;
+    background-color: white;
+  }
+  15% {
+    opacity: 0.2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ae80e5), to(#fface8));
+    background: linear-gradient(#ae80e5, #fface8);
+  }
+  30% {
+    opacity: 0.4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ae80e5), to(#fface8));
+    background: linear-gradient(#ae80e5, #fface8);
+  }
+  45% {
+    opacity: 0.6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ae80e5), to(#fface8));
+    background: linear-gradient(#ae80e5, #fface8);
+  }
+  75% {
+    opacity: 0.8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ae80e5), to(#FF79DA));
+    background: linear-gradient(#ae80e5, #FF79DA);
   }
   100% {
-    width: 5rem;
-    -webkit-filter: brightness(110%);
-            filter: brightness(110%);
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(#9356DC, #FF79DA);
+  }
+}
+@keyframes heartcolor {
+  0% {
+    opacity: 0;
+    background-color: white;
+  }
+  15% {
+    opacity: 0.2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ae80e5), to(#fface8));
+    background: linear-gradient(#ae80e5, #fface8);
+  }
+  30% {
+    opacity: 0.4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ae80e5), to(#fface8));
+    background: linear-gradient(#ae80e5, #fface8);
+  }
+  45% {
+    opacity: 0.6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ae80e5), to(#fface8));
+    background: linear-gradient(#ae80e5, #fface8);
+  }
+  75% {
+    opacity: 0.8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ae80e5), to(#FF79DA));
+    background: linear-gradient(#ae80e5, #FF79DA);
+  }
+  100% {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(#9356DC, #FF79DA);
   }
 }
 
-@keyframes apparition {
+/*keyframes du check*/
+@-webkit-keyframes apparition {
   0% {
     width: 0rem;
-    -webkit-filter: brightness(110%);
-            filter: brightness(110%);
   }
   100% {
     width: 5rem;
-    -webkit-filter: brightness(110%);
-            filter: brightness(110%);
+  }
+}
+@keyframes apparition {
+  0% {
+    width: 0rem;
+  }
+  100% {
+    width: 5rem;
+  }
+}
+
+/*keyframes des menus*/
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -591,6 +667,15 @@ figure {
   height: 240px;
 }
 
+figure:hover #coeur {
+  content: "\002665";
+  /*font-family: "Font Awesome 5 empty";*/
+  -webkit-animation: heartcolor 2s forwards;
+          animation: heartcolor 2s forwards;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
 figure figcaption {
   position: absolute;
   background-color: white;
@@ -643,40 +728,36 @@ figure figcaption .restaurant-info {
   margin: 6px;
 }
 
-.restaurant-info__heart::before {
-  cursor: pointer;
-  position: absolute;
-  font-weight: 400;
-  font-size: 1.7rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+/*{
+    cursor: pointer;
+    position: absolute;
+    font-weight: 400;
+    font-size: 1.7rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
-
-.restaurant-info__heart:hover {
-  cursor: pointer;
-  position: absolute;
-  content: "\f004";
-  font-family: "Font Awesome 5 empty";
-  font-size: 1.7rem;
-  font-weight: 900;
-  font-size: 1.7rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-transition: opacity 800ms ease-in-out;
-  transition: opacity 800ms ease-in-out;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  opacity: 0;
-}
-
+.restaurant-info__heart:hover
+{
+    cursor: pointer;
+    position: absolute;
+    content: "\f004";
+    font-family: "Font Awesome 5 empty";
+    font-size: 1.7rem;
+    font-weight: 900;
+    font-size: 1.7rem;
+    background: linear-gradient(#9356DC, #FF79DA);
+    transition: opacity 800ms ease-in-out;
+    transform-origin: bottom;
+    opacity: 0;
+}*/
 footer {
   background-color: #444444;
   color: white;
@@ -2119,6 +2200,27 @@ a {
   position: relative;
   top: 35px;
   right: 20px;
+}
+
+.blocmenu-menu-entrées {
+  -webkit-animation: fadein 1s both;
+          animation: fadein 1s both;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.blocmenu-menu-plats {
+  -webkit-animation: fadein 1s both;
+          animation: fadein 1s both;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.blocmenu-menu-desserts {
+  -webkit-animation: fadein 1s both;
+          animation: fadein 1s both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 /*images du projet 3*/

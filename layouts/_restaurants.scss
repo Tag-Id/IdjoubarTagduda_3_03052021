@@ -51,8 +51,7 @@
 
             & .restaurant
             {
-                display: flex;
-                flex-direction: column;
+                @include flexcol;
                 align-items: center;
             } 
         }
@@ -69,6 +68,18 @@ figure
     margin: 0px;
     max-width: 350px;
     height: 240px;
+
+    &:hover
+        {   
+            & #coeur
+            {
+                content: "\002665";
+                /*font-family: "Font Awesome 5 empty";*/
+                animation: heartcolor 2s forwards;
+                transform-origin: left;
+            }
+            
+        }
 
     & figcaption
     {
@@ -115,8 +126,9 @@ figure
     }
 }
 
-.restaurant-info__heart::before
-{
+
+
+/*{
     cursor: pointer;
     position: absolute;
     font-weight: 400;
@@ -145,4 +157,4 @@ figure
     transition: opacity 800ms ease-in-out;
     transform-origin: bottom;
     opacity: 0;
-}
+}*/

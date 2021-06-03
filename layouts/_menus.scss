@@ -57,6 +57,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: baseline;
+                
                 @media screen and (min-width: 1024px) 
                     {
                         display: flex;
@@ -132,4 +133,18 @@
             }
         }
     }
-    
+.blocmenu-menu-entrées
+{
+    animation: fadein 1s both;
+    animation-delay: 0s;
+}    
+.blocmenu-menu-plats
+{
+    animation: fadein 1s both;
+    animation-delay: 500ms;
+}  
+.blocmenu-menu-desserts
+{
+    animation: fadein 1s both;
+    animation-delay: 1s;
+}  
