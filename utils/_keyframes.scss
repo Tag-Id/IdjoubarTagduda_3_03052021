@@ -75,6 +75,18 @@
         width: 5rem;
     }
 }
+@keyframes reduction
+{
+    0% 
+    {
+        flex-shrink: initial;
+    }
+
+    100% 
+    {
+        flex-shrink: inherit;
+    }
+}
 
 /*keyframes des menus*/
 

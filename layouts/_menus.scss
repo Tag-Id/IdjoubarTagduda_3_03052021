@@ -148,3 +148,33 @@
     animation: fadein 1s both;
     animation-delay: 1s;
 }  
+
+.plat
+{
+    &:hover
+    {   
+        & .nom
+        {
+            animation: reduction 400ms ease-in-out forwards;
+        }
+        & .prix
+        {
+            transform-origin: right;
+            transform: translateX(-6rem);
+            transition: transform 500ms ease;
+        }
+        & .check
+        {   
+            z-index: 0;
+            animation: apparition 400ms ease-in-out forwards;
+        }
+        & .fa-check-circle
+        {
+            z-index: 0;
+            color: white;
+            transform: rotate(360);
+            transition: transform 600ms both;
+        }
+    
+    }
+}
