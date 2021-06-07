@@ -19,7 +19,7 @@
         {  
            display: flex;
            flex-direction: column;
-           @media screen and (min-width: 1024px) 
+           @media screen and (min-width: 1024px) and (max-width: 1800px) 
            {        
                     margin-top: 20px;
                     display: grid;
@@ -48,6 +48,35 @@
                         grid-row: 2;
                     }
            }
+           @media screen and (min-width: 1801px) 
+           {        
+                    margin-top: 20px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-gap: 10px;
+                    grid-template-rows: 300px;
+                    
+                    &  .restaurant-pal 
+                    {
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+                    &  .restaurant-note 
+                    {
+                        grid-column: 2;
+                        grid-row: 1;
+                    }
+                    &  .restaurant-fr 
+                    {
+                        grid-column: 3;
+                        grid-row: 1;
+                    }
+                    & .restaurant-del 
+                    {
+                        grid-column: 4;
+                        grid-row: 1;
+                    }
+           }
 
             & .restaurant
             {
@@ -68,18 +97,31 @@ figure
     margin: 0px;
     max-width: 350px;
     height: 240px;
+    
+    & .coeur
+    {
+        font-size: 20px;
+        font-style: normal;
+        font-family: fontawesome;
+        background: black;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        &:hover
+        {
+            font-size: 20px;
+            font-style: normal;
+            font-family: fontawesome;
+            background: linear-gradient(225deg,$colorprimary, $colorsecondary, $primlight, $seclight) 0% 10% / 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: 2s ease 0s normal /*none*/ running heartcolor;
+            animation: heartcolor 2s ease;
+        }  
 
-    &:hover
-        {   
-            & .coeur
-            {
-                content: "\002665";
-                /*font-family: "Font Awesome 5 empty";*/
-                animation: heartcolor 2s forwards;
-                transform-origin: left;
-            }
-            
-        }
+    }
+    
 
     & figcaption
     {
@@ -128,33 +170,3 @@ figure
 
 
 
-/*{
-    cursor: pointer;
-    position: absolute;
-    font-weight: 400;
-    font-size: 1.7rem;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-.restaurant-info__heart:hover
-{
-    cursor: pointer;
-    position: absolute;
-    content: "\f004";
-    font-family: "Font Awesome 5 empty";
-    font-size: 1.7rem;
-    font-weight: 900;
-    font-size: 1.7rem;
-    background: linear-gradient(#9356DC, #FF79DA);
-    transition: opacity 800ms ease-in-out;
-    transform-origin: bottom;
-    opacity: 0;
-}*/

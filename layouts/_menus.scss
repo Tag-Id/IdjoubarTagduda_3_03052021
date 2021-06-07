@@ -64,7 +64,7 @@
                         flex-direction: column;
                         width: 100%;
                         max-width: none;
-                        align-items: center;
+                        align-items: baseline;
                         margin-right: 15px;
                         padding-top: 20px;
                     }
@@ -172,9 +172,12 @@
         {
             z-index: 0;
             color: white;
-            transform: rotate(360);
-            transition: transform 600ms both;
+            /*transform: rotate(360);
+            transition: transform 600ms both;*/
+            animation: spin 600ms linear infinite paused; 
+            animation-play-state: running;  
+            
         }
-    
     }
 }
+ 

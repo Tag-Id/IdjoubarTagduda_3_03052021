@@ -18,48 +18,49 @@
         visibility: hidden;
     }
 }
-@keyframes fa-spin
+@keyframes spin
 {
-    0% 
-    { 
-        background-color: white;
+    from 
+    {
+        transform: rotate(0deg);
     }
-    100%
-    {   
-        background-color: white;
-        opacity: 0;
-        visibility: hidden;
-    }
+    to 
+    {
+        transform: rotate(360deg);
+    } 
 
 }
 
 /*keyframes du coeur*/
 @keyframes heartcolor
-{
-    0% {
+{   
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+    /*0% {
         opacity: 0;
-        background-color: white;
+        color: white;
     }
     15% {
         opacity: 0.2;
-        background: linear-gradient($primlight, $seclight);
+        color: linear-gradient($primlight, $seclight);
     }
     30% {
         opacity: 0.4;
-        background: linear-gradient($primlight, $seclight);
+        color: linear-gradient($primlight, $seclight);
     }
     45% {
         opacity: 0.6;
-        background: linear-gradient($primlight, $seclight);
+        color: linear-gradient($primlight, $seclight);
     }
     75% {
         opacity: 0.8;
-        background: linear-gradient($primlight, $colorsecondary);
+        color: linear-gradient($primlight, $colorsecondary);
     }
     100% {
         opacity: 1;
-        background: linear-gradient($colorprimary, $colorsecondary);
-    }
+        color: linear-gradient($colorprimary, $colorsecondary);
+    }*/
 }
 
 /*keyframes du check*/
