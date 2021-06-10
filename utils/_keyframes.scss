@@ -18,7 +18,7 @@
         visibility: hidden;
     }
 }
-@keyframes spin
+@keyframes checkrotation
 {
     from 
     {
@@ -34,33 +34,45 @@
 /*keyframes du coeur*/
 @keyframes heartcolor
 {   
-    0%{background-position:0% 92%}
-    50%{background-position:100% 9%}
-    100%{background-position:0% 92%}
-    /*0% {
+    0% {
         opacity: 0;
         color: white;
     }
     15% {
         opacity: 0.2;
-        color: linear-gradient($primlight, $seclight);
+        color: linear-gradient(to left, $primlight, white);
     }
     30% {
         opacity: 0.4;
-        color: linear-gradient($primlight, $seclight);
+        color: linear-gradient(to left, $primlight, white);
     }
     45% {
         opacity: 0.6;
-        color: linear-gradient($primlight, $seclight);
+        color: linear-gradient(to left, $primlight, $seclight);
     }
     75% {
         opacity: 0.8;
-        color: linear-gradient($primlight, $colorsecondary);
+        color: linear-gradient(to left, $colorprimary, $seclight);
     }
     100% {
         opacity: 1;
-        color: linear-gradient($colorprimary, $colorsecondary);
-    }*/
+        color: linear-gradient(to left, $colorprimary, $colorsecondary);
+    }
+}
+@keyframes heartborder
+{
+    0%
+    {
+        opacity: 1;
+    }
+    1%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
 }
 
 /*keyframes du check*/
@@ -73,19 +85,21 @@
 
     100% 
     {
-        width: 5rem;
+        width: 4rem;
     }
 }
 @keyframes reduction
-{
+{ 
     0% 
     {
-        flex-shrink: initial;
+        width: 100%;
     }
 
     100% 
     {
-        flex-shrink: inherit;
+        width: 30%;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 

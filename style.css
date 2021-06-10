@@ -31,98 +31,104 @@
   }
 }
 
-@-webkit-keyframes fa-spin {
-  0% {
-    background-color: white;
+@-webkit-keyframes checkrotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  100% {
-    background-color: white;
-    opacity: 0;
-    visibility: hidden;
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@keyframes fa-spin {
-  0% {
-    background-color: white;
+@keyframes checkrotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  100% {
-    background-color: white;
-    opacity: 0;
-    visibility: hidden;
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 /*keyframes du coeur*/
 @-webkit-keyframes heartcolor {
   0% {
-    background-position: 0% 92%;
+    opacity: 0;
+    color: white;
   }
-  50% {
-    background-position: 100% 9%;
+  15% {
+    opacity: 0.2;
+    color: linear-gradient(to left, #ae80e5, white);
+  }
+  30% {
+    opacity: 0.4;
+    color: linear-gradient(to left, #ae80e5, white);
+  }
+  45% {
+    opacity: 0.6;
+    color: linear-gradient(to left, #ae80e5, #fface8);
+  }
+  75% {
+    opacity: 0.8;
+    color: linear-gradient(to left, #9356DC, #fface8);
   }
   100% {
-    background-position: 0% 92%;
+    opacity: 1;
+    color: linear-gradient(to left, #9356DC, #FF79DA);
   }
-  /*0% {
-        opacity: 0;
-        color: white;
-    }
-    15% {
-        opacity: 0.2;
-        color: linear-gradient($primlight, $seclight);
-    }
-    30% {
-        opacity: 0.4;
-        color: linear-gradient($primlight, $seclight);
-    }
-    45% {
-        opacity: 0.6;
-        color: linear-gradient($primlight, $seclight);
-    }
-    75% {
-        opacity: 0.8;
-        color: linear-gradient($primlight, $colorsecondary);
-    }
-    100% {
-        opacity: 1;
-        color: linear-gradient($colorprimary, $colorsecondary);
-    }*/
 }
 @keyframes heartcolor {
   0% {
-    background-position: 0% 92%;
+    opacity: 0;
+    color: white;
   }
-  50% {
-    background-position: 100% 9%;
+  15% {
+    opacity: 0.2;
+    color: linear-gradient(to left, #ae80e5, white);
+  }
+  30% {
+    opacity: 0.4;
+    color: linear-gradient(to left, #ae80e5, white);
+  }
+  45% {
+    opacity: 0.6;
+    color: linear-gradient(to left, #ae80e5, #fface8);
+  }
+  75% {
+    opacity: 0.8;
+    color: linear-gradient(to left, #9356DC, #fface8);
   }
   100% {
-    background-position: 0% 92%;
+    opacity: 1;
+    color: linear-gradient(to left, #9356DC, #FF79DA);
   }
-  /*0% {
-        opacity: 0;
-        color: white;
-    }
-    15% {
-        opacity: 0.2;
-        color: linear-gradient($primlight, $seclight);
-    }
-    30% {
-        opacity: 0.4;
-        color: linear-gradient($primlight, $seclight);
-    }
-    45% {
-        opacity: 0.6;
-        color: linear-gradient($primlight, $seclight);
-    }
-    75% {
-        opacity: 0.8;
-        color: linear-gradient($primlight, $colorsecondary);
-    }
-    100% {
-        opacity: 1;
-        color: linear-gradient($colorprimary, $colorsecondary);
-    }*/
+}
+
+@-webkit-keyframes heartborder {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heartborder {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*keyframes du check*/
@@ -131,7 +137,7 @@
     width: 0rem;
   }
   100% {
-    width: 5rem;
+    width: 4rem;
   }
 }
 @keyframes apparition {
@@ -139,27 +145,29 @@
     width: 0rem;
   }
   100% {
-    width: 5rem;
+    width: 4rem;
   }
 }
 
 @-webkit-keyframes reduction {
   0% {
-    flex-shrink: initial;
+    width: 100%;
   }
   100% {
-    flex-shrink: inherit;
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
 @keyframes reduction {
   0% {
-    -ms-flex-negative: initial;
-        flex-shrink: initial;
+    width: 100%;
   }
   100% {
-    -ms-flex-negative: inherit;
-        flex-shrink: inherit;
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -732,28 +740,40 @@ figure {
   height: 240px;
 }
 
-figure .coeur {
-  font-size: 20px;
+figure .coeurbord {
+  font-size: 25px;
   font-style: normal;
-  font-family: fontawesome;
-  background: black;
+  color: black;
+  position: absolute;
+}
+
+figure .coeurbord:hover {
+  font-size: 0px;
+  color: white;
+  z-index: -2;
+  -webkit-animation: heartborder 0.2s ease forwards;
+          animation: heartborder 0.2s ease forwards;
+}
+
+figure .coeurcolor {
+  font-size: 25px;
+  font-style: normal;
+  background: white;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-figure .coeur:hover {
-  font-size: 20px;
+figure .coeurcolor:hover {
+  font-size: 25px;
   font-style: normal;
-  font-family: fontawesome;
-  background: linear-gradient(225deg, #9356DC, #FF79DA, #ae80e5, #fface8) 0% 10%/300% 300%;
+  background: linear-gradient(225deg, #9356DC, #FF79DA, #ae80e5, #fface8);
+  background-size: 100% 100%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-animation: 2s ease 0s normal none running heartcolor;
-          animation: 2s ease 0s normal none running heartcolor;
-  -webkit-animation: heartcolor 2s ease;
-          animation: heartcolor 2s ease;
+  -webkit-animation: heartcolor 2s ease forwards;
+          animation: heartcolor 2s ease forwards;
 }
 
 figure figcaption {
@@ -916,6 +936,42 @@ a {
 
 .menu .blocmenu .blocmenu-head h2 {
   font: 25px 'Shrikhand';
+}
+
+.menu .blocmenu .blocmenu-head .coeurbord {
+  font-size: 25px;
+  font-style: normal;
+  color: black;
+  position: absolute;
+}
+
+.menu .blocmenu .blocmenu-head .coeurbord:hover {
+  font-size: 0px;
+  color: white;
+  z-index: -2;
+  -webkit-animation: heartborder 0.2s ease forwards;
+          animation: heartborder 0.2s ease forwards;
+}
+
+.menu .blocmenu .blocmenu-head .coeurcolor {
+  font-size: 25px;
+  font-style: normal;
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.menu .blocmenu .blocmenu-head .coeurcolor:hover {
+  font-size: 25px;
+  font-style: normal;
+  background: linear-gradient(225deg, #9356DC, #FF79DA, #ae80e5, #fface8);
+  background-size: 100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-animation: heartcolor 2s ease forwards;
+          animation: heartcolor 2s ease forwards;
 }
 
 .menu .blocmenu .blocmenu-sanstitre {
@@ -2273,16 +2329,39 @@ a {
           animation-delay: 1s;
 }
 
-.plat:hover .nom {
-  -webkit-animation: reduction 400ms ease-in-out forwards;
-          animation: reduction 400ms ease-in-out forwards;
+.plat .nom_cut {
+  z-index: 0;
+}
+
+.plat .prix {
+  z-index: 0;
+}
+
+.plat .check {
+  z-index: 0;
+}
+
+.plat .fa-check-circle {
+  z-index: 0;
+  color: white;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.plat:hover .nom_cut {
+  z-index: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50px;
 }
 
 .plat:hover .prix {
+  z-index: 0;
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transform: translateX(-6rem);
-          transform: translateX(-6rem);
+  -webkit-transform: translateX(-5rem);
+          transform: translateX(-5rem);
   -webkit-transition: -webkit-transform 500ms ease;
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
@@ -2298,12 +2377,20 @@ a {
 .plat:hover .fa-check-circle {
   z-index: 0;
   color: white;
-  -webkit-transform: rotate(360);
-          transform: rotate(360);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   -webkit-transition: -webkit-transform 600ms both;
   transition: -webkit-transform 600ms both;
   transition: transform 600ms both;
   transition: transform 600ms both, -webkit-transform 600ms both;
+  -webkit-animation: spin 600ms linear infinite paused;
+          animation: spin 600ms linear infinite paused;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-transition: -webkit-transform 500ms linear 0ms;
+  transition: -webkit-transform 500ms linear 0ms;
+  transition: transform 500ms linear 0ms;
+  transition: transform 500ms linear 0ms, -webkit-transform 500ms linear 0ms;
 }
 
 /*images du projet 3*/
@@ -2415,11 +2502,11 @@ a {
   font-size: 22px;
 }
 
-.fa-heart {
-  font-size: 25px;
-  color: linear-gradient(to bottom, #FF79DA, #9356DC);
-}
-
+/*.fa-heart
+{
+    font-size: 25px;
+    color: linear-gradient(to bottom, $colorsecondary, $colorprimary);
+}*/
 .btn {
   font-family: 'Roboto', sans-serif;
   text-align: center;
