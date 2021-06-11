@@ -1,8 +1,7 @@
 .menu
     {
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        @include flexcol;
         align-items: center;
         
         & .blocmenu
@@ -13,8 +12,7 @@
             margin-top: -50px;
             padding-bottom: 4rem;
             z-index: 1;
-            display: flex;
-            flex-direction: column;
+            @include flexcol;
             align-items: center;
             align-content: center;
 
@@ -72,14 +70,12 @@
                 width: 100%;
                 max-width: 600px;
                 min-width: 320px;
-                display: flex;
-                flex-direction: column;
+                @include flexcol;
                 align-items: center;
 
                 @media screen and (min-width: 1024px) 
                 {
-                    display: flex;
-                    flex-direction: row;
+                    @include flexrow;
                     width: 90%;
                     max-width: none;
                     padding-top: 20px;
@@ -89,14 +85,12 @@
                 {
                 width: 90%;
                 max-width:400px;
-                display: flex;
-                flex-direction: column;
+                @include flexcol;
                 align-items: baseline;
                 
                 @media screen and (min-width: 1024px) 
                     {
-                        display: flex;
-                        flex-direction: column;
+                        @include flexcol;
                         width: 100%;
                         max-width: none;
                         align-items: baseline;
@@ -135,10 +129,9 @@
                         
                         & .nom
                         {
-                            display: flex;
+                            @include flexcol;
                             width: 80%;
                             min-width: 200px;
-                            flex-direction: column;
                             margin-left: 10px;
                             line-height: 22px;
                             & .nom_cut 
@@ -150,7 +143,6 @@
                                     text-overflow: ellipsis;
                                     width: 99%;
                                 }
-                            
                             } 
                         }
                         & .prix
@@ -184,58 +176,3 @@
     animation-delay: 1s;
 }  
 
-.plat
-{
-    & .nom_cut
-        {
-            z-index: 0;
-        }
-        & .prix
-        {
-            z-index: 0;
-        }
-        & .check
-        {   
-            z-index: 0;
-        }
-        & .fa-check-circle
-        {
-            z-index: 0;
-            color: white;
-            transform: rotate(180deg);
-        }
-    &:hover
-    {  
-        & .nom_cut
-        {
-            z-index: 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 50px;
-        }
-        & .prix
-        {
-            z-index: 0;
-            transform-origin: right;
-            transform: translateX(-5rem);
-            transition: transform 500ms ease;
-        }
-        & .check
-        {   
-            z-index: 0;
-            animation: apparition 400ms ease-in-out forwards;
-        }
-        & .fa-check-circle
-        {
-            z-index: 0;
-            color: white;
-            transform: rotate(360deg);
-            transition: transform 600ms both;
-            animation: spin 600ms linear infinite paused; 
-            animation-play-state: running;  
-            transition: transform 500ms linear 0ms;
-            
-        }
-    }
-}

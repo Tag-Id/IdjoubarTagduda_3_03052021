@@ -154,7 +154,7 @@
     width: 100%;
   }
   100% {
-    width: 30%;
+    width: 65%;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -165,7 +165,7 @@
     width: 100%;
   }
   100% {
-    width: 30%;
+    width: 65%;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -1086,12 +1086,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
-  min-width: 200px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 80%;
+  min-width: 200px;
   margin-left: 10px;
   line-height: 22px;
 }
@@ -2329,70 +2329,6 @@ a {
           animation-delay: 1s;
 }
 
-.plat .nom_cut {
-  z-index: 0;
-}
-
-.plat .prix {
-  z-index: 0;
-}
-
-.plat .check {
-  z-index: 0;
-}
-
-.plat .fa-check-circle {
-  z-index: 0;
-  color: white;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.plat:hover .nom_cut {
-  z-index: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 50px;
-}
-
-.plat:hover .prix {
-  z-index: 0;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: translateX(-5rem);
-          transform: translateX(-5rem);
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
-  transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
-}
-
-.plat:hover .check {
-  z-index: 0;
-  -webkit-animation: apparition 400ms ease-in-out forwards;
-          animation: apparition 400ms ease-in-out forwards;
-}
-
-.plat:hover .fa-check-circle {
-  z-index: 0;
-  color: white;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 600ms both;
-  transition: -webkit-transform 600ms both;
-  transition: transform 600ms both;
-  transition: transform 600ms both, -webkit-transform 600ms both;
-  -webkit-animation: spin 600ms linear infinite paused;
-          animation: spin 600ms linear infinite paused;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  -webkit-transition: -webkit-transform 500ms linear 0ms;
-  transition: -webkit-transform 500ms linear 0ms;
-  transition: transform 500ms linear 0ms;
-  transition: transform 500ms linear 0ms, -webkit-transform 500ms linear 0ms;
-}
-
 /*images du projet 3*/
 #logo {
   width: 50%;
@@ -2502,11 +2438,6 @@ a {
   font-size: 22px;
 }
 
-/*.fa-heart
-{
-    font-size: 25px;
-    color: linear-gradient(to bottom, $colorsecondary, $colorprimary);
-}*/
 .btn {
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -2556,7 +2487,6 @@ a {
 .check {
   border-radius: 0 20px 20px 0;
   position: absolute;
-  z-index: -1;
   right: 0rem;
   height: 100%;
   width: 0;
@@ -2566,8 +2496,68 @@ a {
 
 .check .fa-check-circle {
   color: transparent;
-  z-index: 0;
   font-size: 1.7rem;
   margin-top: 1.4rem;
+}
+
+.plat .nom_cut {
+  z-index: 0;
+}
+
+.plat .prix {
+  z-index: 0;
+}
+
+.plat .check {
+  z-index: 0;
+}
+
+.plat .fa-check-circle {
+  color: transparent;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.plat:hover .nom_cut {
+  z-index: 0;
+  -webkit-animation: reduction 400ms ease-in-out forwards;
+          animation: reduction 400ms ease-in-out forwards;
+}
+
+.plat:hover .prix {
+  z-index: 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: translateX(-4rem);
+          transform: translateX(-4rem);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.plat:hover .check {
+  z-index: 0;
+  -webkit-animation: apparition 400ms ease-in-out forwards;
+          animation: apparition 400ms ease-in-out forwards;
+}
+
+.plat:hover .fa-check-circle {
+  z-index: 0;
+  color: white;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 600ms both;
+  transition: -webkit-transform 600ms both;
+  transition: transform 600ms both;
+  transition: transform 600ms both, -webkit-transform 600ms both;
+  -webkit-animation: spin 600ms linear infinite paused;
+          animation: spin 600ms linear infinite paused;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-transition: -webkit-transform 500ms linear 0ms;
+  transition: -webkit-transform 500ms linear 0ms;
+  transition: transform 500ms linear 0ms;
+  transition: transform 500ms linear 0ms, -webkit-transform 500ms linear 0ms;
 }
 /*# sourceMappingURL=style.css.map */

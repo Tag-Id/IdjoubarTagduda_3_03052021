@@ -8,12 +8,6 @@
     font-size: 22px;
 }
 
-/*.fa-heart
-{
-    font-size: 25px;
-    color: linear-gradient(to bottom, $colorsecondary, $colorprimary);
-}*/
-
 .btn
 {
     font-family: 'Roboto', sans-serif;
@@ -62,7 +56,6 @@
 {
     border-radius: 0 20px 20px 0;
     position: absolute;
-    z-index: -1;
     right: 0rem;
     height: 100%;
     width: 0;
@@ -73,9 +66,60 @@
     & .fa-check-circle
     {   
         color: transparent;
-        z-index: 0;
         font-size: 1.7rem;
         margin-top: 1.4rem;
+    }
+}
+
+.plat
+{
+    & .nom_cut
+    {
+        z-index: 0;
+    }
+    & .prix
+    {
+        z-index: 0;
+    }
+    & .check
+    {   
+        z-index: 0;
+    }
+    & .fa-check-circle
+    {
+        color: transparent;
+        transform: rotate(180deg);
+    }
+    &:hover
+    {  
+        & .nom_cut
+        {
+            z-index: 0;
+            animation: reduction 400ms ease-in-out forwards;
+        }
+        & .prix
+        {
+            z-index: 0;
+            transform-origin: right;
+            transform: translateX(-4rem);
+            transition: transform 500ms ease-in-out;
+        }
+        & .check
+        {   
+            z-index: 0;
+            animation: apparition 400ms ease-in-out forwards;
+        }
+        & .fa-check-circle
+        {
+            z-index: 0;
+            color: white;
+            transform: rotate(360deg);
+            transition: transform 600ms both;
+            animation: spin 600ms linear infinite paused; 
+            animation-play-state: running;  
+            transition: transform 500ms linear 0ms;
+            
+        }
     }
 }
 
