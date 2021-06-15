@@ -1,10 +1,11 @@
+/*organisation des menus dans les pages des restaurants*/
 .menu
     {
         width: 100%;
         @include flexcol;
         align-items: center;
         
-        & .blocmenu
+        & .blocmenu /*nom du restau+menu*/
         {   
             width: 100%;
             background-color: #F6F6F6;
@@ -16,7 +17,7 @@
             align-items: center;
             align-content: center;
 
-            & .blocmenu-head
+            & .blocmenu-head /*nom du restau+coeur*/
             {
                 display: flex;
                 justify-content: space-between;
@@ -25,11 +26,11 @@
                 max-width: 400px;
                 padding-top: 20px;
 
-                & h2
+                & h2/*nom du restau*/
                 {
-                    font: 25px 'Shrikhand';
+                    font: 25px $police2;
                 }
-                & .coeurbord
+                & .coeurbord /*coeur avant hover non coloré*/
                 {
                     font-size: 25px;
                     font-style: normal;
@@ -43,12 +44,12 @@
                         animation: heartborder 0.2s ease forwards;
                     }
                 }
-                & .coeurcolor
+                & .coeurcolor /*coeur après hover coloré*/
                 {
                     font-size: 25px;
                     font-style: normal;
                     background: white;
-                    background-clip: text;
+                    background-clip: inherit;
                     -webkit-background-clip: text;
                     color: transparent;
                     
@@ -58,14 +59,14 @@
                         font-style: normal ;
                         background: linear-gradient(225deg,$colorprimary, $colorsecondary, $primlight, $seclight);
                         background-size: 100% 100%;
-                        background-clip: text;
+                        background-clip: inherit;
                         -webkit-background-clip: text;
                         color: transparent;
-                        animation: heartcolor 2s ease forwards;
+                        animation: heartcolor 1s ease forwards;
                     }  
                 }
             }
-            & .blocmenu-sanstitre
+            & .blocmenu-sanstitre /*organisation du menu sans nom du restau*/
             {   
                 width: 100%;
                 max-width: 600px;
@@ -81,14 +82,14 @@
                     padding-top: 20px;
                     align-items: flex-start;
                 }
-                & .blocmenu-menu
+                & .blocmenu-menu /*entrées+plats+desserts*/
                 {
                 width: 90%;
                 max-width:400px;
                 @include flexcol;
                 align-items: baseline;
                 
-                @media screen and (min-width: 1024px) 
+                @media screen and (min-width: 1024px) /*entrées+plats+desserts ecran ordi*/
                     {
                         @include flexcol;
                         width: 100%;
@@ -97,10 +98,10 @@
                         margin-right: 15px;
                         padding-top: 20px;
                     }
-                    & h4 
+                    & h4 /*titres entrées plats et desserts*/
                     {   
                         margin-right: 20px;
-                        font-family: 'Roboto';
+                        font-family: $police1;
                         text-transform: uppercase;
                         font-weight: 300;
                         padding-bottom: 5px;
@@ -108,10 +109,10 @@
                         box-sizing: border-box;
                         width: 45px;
                     }
-                    & .plat
+                    & .plat /*vignette de plats proposés*/
                     {
                         position: relative;
-                        font-family: 'Roboto';
+                        font-family: $police1;
                         width: 100%;
                         max-width: 400px;
                         height: 4.5rem;
@@ -127,14 +128,14 @@
                                 margin-bottom: 20px;
                             }
                         
-                        & .nom
+                        & .nom /*description du plat*/
                         {
                             @include flexcol;
                             width: 80%;
                             min-width: 200px;
                             margin-left: 10px;
                             line-height: 22px;
-                            & .nom_cut 
+                            & .nom_cut /*fonction pour le découpage de la description/nowrap+3...*/
                             {
                                 @for $width from 0px to 300px 
                                 {
@@ -145,7 +146,7 @@
                                 }
                             } 
                         }
-                        & .prix
+                        & .prix /*prix du plat*/
                         {
                             font-weight: bold;
                             align-self: baseline;
@@ -160,6 +161,8 @@
             }
         }
     }
+
+/*animation d'affichage du menu*/
 .blocmenu-menu-entrées
 {
     animation: fadein 1s both;

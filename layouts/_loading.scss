@@ -1,4 +1,6 @@
-.loading
+/*réglages du loading spinner*/
+
+.loading /*champs*/
     {
         position: fixed;
         z-index: 1;
@@ -12,27 +14,27 @@
         @include center;
         animation: endloading 2s forwards;
     }
-#loader
+#loader /*point qui tourne dans le sens des aiguilles*/
     {
         font-size: 18em;
         animation: fa-spin 1s steps(8) infinite;
         background-color: white; 
     }
-.loading-anim__logo
+.loading-anim__logo /*ohmyfood au centre du loading spinner + couverts autour*/
 { 
     @include loadposition;
 }
-.fa-spinner::before
+.fa-spinner::before /*design du loading spinner*/
     {   
         border-radius: 50%;
         background: linear-gradient(to bottom, $colorsecondary, $colorprimary);
         color: white;
     }
-.loading-anim__logo p
+.loading-anim__logo p /*ohmyfood au centre du loading spinner*/
     {
         @include loadposition;
     }
-.logo-adjust
+.logo-adjust /*format et position des couverts*/
 {   
     display: flex;
     width: 300px;

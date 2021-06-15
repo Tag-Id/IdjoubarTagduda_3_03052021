@@ -1,5 +1,6 @@
-/*keyframes du loading spinner*/ 
+/*keyframes du projet 3*/
 
+/*keyframes du loading spinner*/ 
 @keyframes endloading
 {
     0% 
@@ -18,47 +19,32 @@
         visibility: hidden;
     }
 }
-@keyframes checkrotation
-{
-    from 
-    {
-        transform: rotate(0deg);
-    }
-    to 
-    {
-        transform: rotate(360deg);
-    } 
-
-}
 
 /*keyframes du coeur*/
+            /*apparition du coeur de couleur*/
 @keyframes heartcolor
 {   
     0% {
         opacity: 0;
-        color: white;
+        background-color: white;
     }
     15% {
         opacity: 0.2;
-        color: linear-gradient(to left, $primlight, white);
     }
     30% {
         opacity: 0.4;
-        color: linear-gradient(to left, $primlight, white);
     }
     45% {
         opacity: 0.6;
-        color: linear-gradient(to left, $primlight, $seclight);
     }
     75% {
         opacity: 0.8;
-        color: linear-gradient(to left, $colorprimary, $seclight);
     }
     100% {
         opacity: 1;
-        color: linear-gradient(to left, $colorprimary, $colorsecondary);
     }
 }
+            /*disparition du bord du coeur*/
 @keyframes heartborder
 {
     0%
@@ -76,6 +62,7 @@
 }
 
 /*keyframes du check*/
+            /*apparition de la zone du check*/
 @keyframes apparition
 {
     0% 
@@ -88,7 +75,8 @@
         width: 4rem;
     }
 }
-@keyframes reduction
+            /*reduction de la description des plats*/
+@keyframes reduction 
 { 
     0% 
     {
@@ -97,14 +85,26 @@
 
     100% 
     {
-        width: 65%;
+        width: 80%;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 }
+            /*rotation du check à l'apparition*/
+@keyframes checkrotation
+{
+    from 
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg);
+    } 
+}
 
 /*keyframes des menus*/
-
+            /*apparition décalée entrées plats desserts*/
 @keyframes fadein 
 {
     from {

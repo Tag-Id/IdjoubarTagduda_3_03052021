@@ -1,24 +1,25 @@
+/*organisation de la partie restaurant de l'accueil*/
 #restaurants
     {
         padding: 1.5rem 0 3rem;
         background-color: #F6F6F6;
 
-        @media screen and (min-width: 1024px) 
+        @media screen and (min-width: 1024px) /*affichage en 1024px*/
         {
             @include flexcol;
             align-items: center;   
         }
-        & h2 
+        & h2 /*titre de la partie*/
         {
             width: 90%;
             margin: 1rem auto;
             max-width: 22rem;
             padding-bottom: 0px;
         }
-        & .restaurants__list
+        & .restaurants__list /*affichage des restaurants proposés*/
         {  
-           @include flexcol;
-           @media screen and (min-width: 1024px) and (max-width: 1800px) 
+           @include flexcol; /*en liste sur mobile et tablette*/
+           @media screen and (min-width: 1024px) and (max-width: 1800px) /*grid sur ordi*/
            {        
                     margin-top: 20px;
                     display: grid;
@@ -47,7 +48,7 @@
                         grid-row: 2;
                     }
            }
-           @media screen and (min-width: 1801px) 
+           @media screen and (min-width: 1801px) /*en ligne en 4k*/
            {        
                     margin-top: 20px;
                     display: grid;
@@ -77,7 +78,7 @@
                     }
            }
 
-            & .restaurant
+            & .restaurant /*organisation à l'intérieur de chaque vignette restau*/
             {
                 @include flexcol;
                 align-items: center;
@@ -85,11 +86,11 @@
         }
         
     }
-.choixrestau
+.choixrestau /*format du lien restaurant*/
 {
     @include restauposition;
 }
-figure
+figure /*format des figure*/
 {
     width: 100%;
     min-width: 270px;
@@ -97,7 +98,8 @@ figure
     max-width: 350px;
     height: 240px;
 
-    & .coeurbord
+/*format du coeur*/
+    & .coeurbord 
     {
         font-size: 25px;
         font-style: normal;
@@ -106,7 +108,7 @@ figure
         &:hover
         {
             font-size: 0px;
-            color: white;
+            color: transparent;
             z-index: -2;
             animation: heartborder 0.2s ease forwards;
         }
@@ -115,8 +117,8 @@ figure
     {
         font-size: 25px;
         font-style: normal;
-        background: white;
-        background-clip: text;
+        background: white no-repeat;
+        background-clip:inherit;
         -webkit-background-clip: text;
         color: transparent;
         
@@ -126,15 +128,14 @@ figure
             font-style: normal ;
             background: linear-gradient(225deg,$colorprimary, $colorsecondary, $primlight, $seclight);
             background-size: 100% 100%;
-            background-clip: text;
+            background-clip: inherit;
             -webkit-background-clip: text;
             color: transparent;
-            animation: heartcolor 2s ease forwards;
+            animation: heartcolor 1s ease forwards;
         }  
-
     }
 
-    & figcaption
+    & figcaption /*description des restos*/
     {
         position: absolute;
         background-color: white;
@@ -143,7 +144,7 @@ figure
         height: 50px;
         text-decoration: none;
         color: black;
-        font: 17px 'Roboto';
+        font: 17px $police1;
         bottom: 0;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -159,7 +160,7 @@ figure
     }
 }
 
-.restaurant_nouveau
+.restaurant_nouveau /*étiquette nouveau*/
 {
     position: absolute;
     top: 0.9rem;
@@ -168,7 +169,7 @@ figure
     background-color: #99E2D0;
     color: #278870;
     text-align: center;
-    font: 0.8rem 'Roboto';
+    font: 0.8rem $police1;
     font-weight: 500;
     padding-top: 0rem;
     padding-bottom: 0rem;

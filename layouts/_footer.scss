@@ -1,3 +1,4 @@
+/*organisation du footer*/
 footer 
 {
     background-color: #444444;
@@ -5,7 +6,7 @@ footer
     padding-top: 1.4rem;
     width: 100%;
     
-    & div
+    & div /*format*/
     {   
         width: 90%;
         max-width: 350px;
@@ -17,30 +18,30 @@ footer
         }
     }
 }
-h3
+h3 /*titre du footer*/
 {
     font: 1.5rem 'Shrikhand';
 }
 
-ul 
+ul /*organisation de la liste*/
 {
     list-style-type: none;
     padding-left: 0; 
     text-decoration: none;
-    font: 1em 'Roboto';
+    font: 1em $police1;
     color: white;
     @media screen and (min-width:760px) 
     {
         text-align: center;    
     }
 }
-li
+li /*espace entre les éléments de la liste*/
 {
     padding-bottom: 1rem;
 }
-a 
+a /*format des liens*/
 {
     text-decoration: none;
-    font: 1em 'Roboto';
+    font: 1em $police1;
     color: white;
 }

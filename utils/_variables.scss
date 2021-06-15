@@ -1,5 +1,6 @@
 /*variables du projet 3*/
 
+/*couleurs*/
 $colorprimary : #9356DC;
 $colorsecondary : #FF79DA;
 $colortertiary : #99E2D0;
@@ -7,3 +8,7 @@ $primlight: lighten($colorprimary,10%);
 $seclight: lighten($colorsecondary,10%);
 $colorgrey1: #f1f1f1;
 $colorgrey2: #e4e4e4;
+
+/*polices*/
+$police1: 'Roboto';
+$police2: 'Shrikhand';

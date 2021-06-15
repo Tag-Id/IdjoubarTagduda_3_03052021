@@ -1,4 +1,5 @@
-#backhome
+/*format des boutons*/
+#backhome /*flèche de retour à l'accueil*/
 {
     border: none;
     background-color: white;
@@ -8,9 +9,9 @@
     font-size: 22px;
 }
 
-.btn
+.btn /*bouton explorer de l'accueil*/
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: $police1, sans-serif;
     text-align: center;
 
     & #btn-explore
@@ -18,7 +19,7 @@
         background: linear-gradient(to bottom, $colorsecondary, $colorprimary);
         width: 200px;
         height: 40px;
-        font: 15px 'Roboto';
+        font: 15px $police1;
         color: white;
         border: none;
         border-radius: 20px/20px;
@@ -32,13 +33,14 @@
     }   
 }
 
+/*bouton commander des menus*/
 .btn-command
 {
     background: linear-gradient(to bottom, $colorsecondary, $colorprimary);
     width: 200px;
     margin-top: 50px;
     height: 40px;
-    font: 15px 'Roboto';
+    font: 15px $police1;
     color: white;
     border: none;
     border-radius: 20px/20px;
@@ -52,7 +54,7 @@
     }
 }  
 
-.check
+.check /*fontawesome check au niveau de chaque plat des menus*/
 {
     border-radius: 0 20px 20px 0;
     position: absolute;
@@ -63,7 +65,7 @@
     background-color: $colortertiary;
     
 
-    & .fa-check-circle
+    & .fa-check-circle 
     {   
         color: transparent;
         font-size: 1.7rem;
@@ -71,7 +73,7 @@
     }
 }
 
-.plat
+.plat /*animation du check*/
 {
     & .nom_cut
     {
@@ -114,11 +116,7 @@
             z-index: 0;
             color: white;
             transform: rotate(360deg);
-            transition: transform 600ms both;
-            animation: spin 600ms linear infinite paused; 
-            animation-play-state: running;  
             transition: transform 500ms linear 0ms;
-            
         }
     }
 }

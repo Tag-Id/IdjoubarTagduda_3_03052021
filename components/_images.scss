@@ -1,13 +1,13 @@
 /*images du projet 3*/
 
-#logo
+#logo /*format du logo ohmyfood*/
     {
         width: 50%;
         min-width: 200px;
         height: 60px;
         object-fit: contain;
     }
-.restaurant-img
+.restaurant-img /*image des vignettes restaurants de l'accueil*/
     {
         width: 100%;
         min-width: 270px;
@@ -17,7 +17,7 @@
         object-fit: cover;
         object-position: 0 -4rem;
     }  
-#note
+#note /*particularités de l'image du restau la note enchantée*/
     {
         object-position: 0 -10rem;
         overflow: hidden;
@@ -27,7 +27,7 @@
         }
     }   
 
-.restaurant-img__menu
+.restaurant-img__menu /*format des images en haut des pages menu*/
     {
         width: 100%;
         height: 230px;
@@ -49,7 +49,7 @@
         }
     } 
 
-.restaurant-img__menu__note
+.restaurant-img__menu__note /*particularités du format de l'image en haut de la page du restau la note enchantée*/
 {
     width: 100%;
     height: 230px;

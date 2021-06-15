@@ -1,23 +1,24 @@
+/*format de l'en-tête de l'accueil*/
 header
     {
         @include fullscreen;
         text-align: center;
 
-    & #logo
+    & #logo /*titre de la page format logo*/
         {
             justify-self: center;
         }
 
-    & .form-heading
+    & .form-heading /*formulaire de recherche*/
         {
-            font-family: 'Roboto', sans-serif;
+            font-family: $police1, sans-serif;
             justify-self: center;
             background-color: $colorgrey1;
             height: 250px;
             margin-top: 0px;
             @include fullscreen;
 
-            & .location-search
+            & .location-search /*champs de recherche*/
             {
                 border-left: none;
                 border-right: none;
@@ -27,37 +28,37 @@ header
                 @include flexrow;
                 @include center;
 
-                & .fas
+                & .fas /*icone maps*/
                 {
                     margin-left: 30px;
                     margin-right: 20px;
                 }
-                & .location-search-field
+                & .location-search-field /*espace de saisie*/
                 {
                     border: none;
                     background-color: $colorgrey2;
-                    font: 15px 'Roboto';
+                    font: 15px $police1;
                     line-height: 30px;
                     color: black;
                 }
             }
 
-            & .description
+            & .description /*espace de description*/
             {
                 text-align: center; 
                 @include flexcol;
                 @include center;  
             }
         }        
-    & h1 
+    & h1 /*titre*/
         {
-            font: 21px 'Roboto';
+            font: 21px $police1;
             font-weight: 900;
             width: 250px;
         }
-    & p  
+    & p  /*format paragraphe*/
         {
-            font: 15px 'Roboto';
+            font: 15px $police1;
             width: 300px;
         }
     }

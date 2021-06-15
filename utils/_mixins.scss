@@ -1,30 +1,30 @@
 /*mixins du projet 3*/
 
-@mixin fullscreen
+@mixin fullscreen /*parties qui occupent tout l'écran*/
 {
     width: 100%;
     min-width: 320px;
     max-width: none;
 } 
-@mixin flexcol 
+@mixin flexcol /*position colonne*/
 {
     display: flex;
     flex-direction: column;
 }
-@mixin flexrow 
+@mixin flexrow /*position ligne*/
 {
     display: flex;
     flex-direction: row;
 }
-@mixin center
+@mixin center /*centrer les éléments*/
 {
     justify-content: center;
     align-items: center;
 }
 
-@mixin loadposition 
+@mixin loadposition /*position du loading spinner avant affichage*/
 {
-    font: 20px 'shrikhand';
+    font: 20px $police2;
     color: white;
     font-weight: 900;
     position: fixed;
@@ -35,7 +35,7 @@
     display: flex;
     @include center;
 }
-@mixin numberposition
+@mixin numberposition /*position du chiffre dans les boutons fonctionnement*/
 {   
     background-color: $colorprimary;
     position: relative;
@@ -43,15 +43,15 @@
     width: 1.5rem; 
     height: 1.5rem;
     line-height: 1.3rem;
-    font: 1em 'Roboto'; 
+    font: 1em $police1; 
     border-radius: 50%; 
     padding-top: 0.15rem; 
     margin-left: -0.7rem; 
     text-align: center;
 }
-@mixin textposition 
+@mixin textposition /*position du texte dans les boutons fonctionnement*/
 {   
-    font: 1.1em 'Roboto';
+    font: 1.1em $police1;
     font-weight: 600;
     display: flex;
     flex-wrap: nowrap;
@@ -65,7 +65,7 @@
     text-align: start;    
 }
 
-@mixin restauposition
+@mixin restauposition /*format du lien restaurant*/
 {
     position: relative;
     width: 90%;

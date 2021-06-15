@@ -1,4 +1,4 @@
-
+/*partie fonctionnement de l'accueil*/
 .fonctionnement
     {
         width: 90%;
@@ -16,7 +16,7 @@
             align-items: center;
         }
     }
-.fonctionnement-buttons
+.fonctionnement-buttons /*organisation des boutons*/
     {
         @include flexcol;
         align-items: flex-start;
@@ -26,7 +26,7 @@
             margin-top: 20px;
         }
     }
-.fonctionnement-btn   
+.fonctionnement-btn   /* aspect des boutons*/
     {
         position: relative;
         width: 100%;
@@ -54,9 +54,9 @@
             }
         }
     }
-h2
+h2 /*titre*/
     {
-        font: 21px 'Roboto';
+        font: 21px $police1;
         font-weight: 900;
         width: 250px;
         margin: 0px;
@@ -67,7 +67,7 @@ h2
             text-align: center;    
         }
     }
-#fonctionnement-btn__number1 
+#fonctionnement-btn__number1 /*positionnement des éléments dans les boutons*/
 {
     @include numberposition;
 }
